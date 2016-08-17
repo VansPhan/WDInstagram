@@ -13,6 +13,10 @@
   </head>
   <body>
     <h1>WDInstagram</h1>
-    <main data-ui-view></main>
+    <div data-ng-controller="PostIndexController as postCtrl">
+    <div data-ng-repeat="post in postCtrl.posts">
+    	<h1>{{ post.author }}</h1>
+    </div>
+    </div>
   </body>
 </html>

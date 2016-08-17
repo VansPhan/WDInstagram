@@ -1,6 +1,6 @@
 (function() {
 	angular
 		.module('wdinstagram', [
-			'ngResource'
+			'post'
 		])
 }())
