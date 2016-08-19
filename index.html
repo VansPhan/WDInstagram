@@ -10,13 +10,15 @@
     <script src="js/wdinstagram/wdinstagram.js"></script>
     <script src="js/wdinstagram/index.controller.js"></script>
     <script src="js/wdinstagram/show.controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <h1>WDInstagram</h1>
-    <div data-ng-controller="PostIndexController as postCtrl">
-    <div data-ng-repeat="post in postCtrl.posts">
-    	<h1>{{ post.author }}</h1>
-    </div>
+    <div class="container" data-ng-controller="PostIndexController as postCtrl">
+      <div class="post" data-ng-repeat="post in postCtrl.posts">
+      	<div class="title"><span id="left">{{ post.author }}</span><span id="right">{{ post.created_at | date }}</span></div>
+        <img class="preview" ng-src="{{ post.photo_url }}">
+      </div>
     </div>
   </body>
 </html>
